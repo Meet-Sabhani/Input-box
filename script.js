@@ -77,19 +77,19 @@ function deleteChecked() {
 function selectAllCheckBox() {
   const checkboxes = document.querySelectorAll('input[type="checkbox"]');
   checkboxes.forEach((checkbox) => {
-    checkbox.checked = !checkbox.checked;
+   checkbox.checked = !checkbox.checked;
   });
   saveAll();
 }
 
 function saveAll() {
   localStorage.setItem("out1Info", out1.innerHTML);
-  localStorage.setItem("out2Info", out2.innerHTML);
+  localStorage.setItem("out2Inf", out2.innerHTML);
 }
 
 function reCall() {
   const savedOut1 = localStorage.getItem("out1Info");
-  const savedOut2 = localStorage.getItem("out2Info");
+  const savedOut2 = localStorage.getItem("out2Inf");
 
   if (savedOut1) {
     out1.innerHTML = savedOut1;
