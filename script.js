@@ -48,3 +48,21 @@ function MoveToLeftChecked() {
     out1.appendChild(checkbox.parentElement);
   });
 }
+
+function deleteAll() {
+  const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+  checkboxes.forEach((checkbox) => {
+    const listInfo = checkbox.parentElement;
+    listInfo.parentNode.removeChild(listInfo);
+  });
+}
+
+function deleteChecked() {
+  const checkboxes = document.querySelectorAll(
+    'input[type="checkbox"]:checked'
+  );
+  checkboxes.forEach((checkbox) => {
+    const listInfo = checkbox.parentElement;
+    listInfo.parentNode.removeChild(listInfo);
+  });
+}
