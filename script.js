@@ -19,6 +19,7 @@ function createL() {
     out2.appendChild(div);
   }
   display.value = "";
+  saveAll();
 }
 
 function MoveToRight() {
@@ -26,6 +27,7 @@ function MoveToRight() {
   checkboxes.forEach((checkbox) => {
     out2.appendChild(checkbox.parentElement);
   });
+  saveAll();
 }
 
 function MoveToLeft() {
@@ -33,6 +35,7 @@ function MoveToLeft() {
   checkboxes.forEach((checkbox) => {
     out1.appendChild(checkbox.parentElement);
   });
+  saveAll();
 }
 
 function MoveToRightChecked() {
@@ -40,6 +43,7 @@ function MoveToRightChecked() {
   checkboxes.forEach((checkbox) => {
     out2.appendChild(checkbox.parentElement);
   });
+  saveAll();
 }
 
 function MoveToLeftChecked() {
@@ -47,6 +51,7 @@ function MoveToLeftChecked() {
   checkboxes.forEach((checkbox) => {
     out1.appendChild(checkbox.parentElement);
   });
+  saveAll();
 }
 
 function deleteAll() {
@@ -55,6 +60,7 @@ function deleteAll() {
     const listInfo = checkbox.parentElement;
     listInfo.parentNode.removeChild(listInfo);
   });
+  saveAll();
 }
 
 function deleteChecked() {
@@ -65,4 +71,32 @@ function deleteChecked() {
     const listInfo = checkbox.parentElement;
     listInfo.parentNode.removeChild(listInfo);
   });
+  saveAll();
 }
+
+function selectAllCheckBox() {
+  const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+  checkboxes.forEach((checkbox) => {
+    checkbox.checked = !checkbox.checked;
+  });
+  saveAll();
+}
+
+function saveAll() {
+  localStorage.setItem("out1Info", out1.innerHTML);
+  localStorage.setItem("out2Info", out2.innerHTML);
+}
+
+function reCall() {
+  const savedOut1 = localStorage.getItem("out1Info");
+  const savedOut2 = localStorage.getItem("out2Info");
+
+  if (savedOut1) {
+    out1.innerHTML = savedOut1;
+  }
+
+  if (savedOut2) {
+    out2.innerHTML = savedOut2;
+  }
+}
+reCall();

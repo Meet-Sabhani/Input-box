@@ -49,18 +49,28 @@ section button {
   width: 250px;
   height: 300px;
   border-radius: 8px;
+  overflow-y: scroll;
 }
 
 #output,
-#output2 li{
-    list-style: none;
+#output2 li {
+  list-style: none;
+}
+
+#output,
+#output2 li input, 
+#output,
+#output2 li label{
+    font-size: 1.3rem;
+    cursor: pointer;
+    line-height: 1.8rem;
 }
 
 .result {
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
 }
-
 
 #options,
 #options option {
@@ -71,10 +81,10 @@ section button {
   cursor: pointer;
 }
 
-.buttons{
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    justify-content: center;
-    padding: 10px;
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  padding: 10px;
 }
