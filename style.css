@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+main {
+  background: linear-gradient(-45deg, rgb(255, 109, 133), rgb(187, 0, 255));
+  min-height: 100vh;
+  width: 100%;
+}
+
+section {
+  padding: 4rem 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+section input,
+section button {
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 1rem;
+}
+
+section button {
+  cursor: pointer;
+  background-color: rgb(67, 205, 159);
+  color: #fff;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#output,
+#output2 {
+  margin-top: 1rem;
+  background-color: #fff;
+  padding: 10px;
+  width: 250px;
+  height: 300px;
+  border-radius: 8px;
+}
+
+#output,
+#output2 li{
+    list-style: none;
+}
+
+.result {
+  display: flex;
+  gap: 1rem;
+}
+
+
+#options,
+#options option {
+  padding: 10px;
+  font-size: 20px;
+  padding: 8px 15px;
+  outline: none;
+  cursor: pointer;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    padding: 10px;
+}
